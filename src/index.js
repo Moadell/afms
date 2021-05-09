@@ -2,16 +2,54 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import * as serviceWorker from './serviceWorker';
+import axios from 'axios';
+import 'semantic-ui-css/semantic.min.css'
+
+import 'bootstrap/dist/css/bootstrap.css';
+
+import 'jquery/dist/jquery.js';
+
+
+axios.defaults.baseURL = 'http://localhost:3001/api';
+let userData =  JSON.parse(localStorage.getItem("userData"))
+let token
+if(userData){
+    token= userData.token
+}
+
+axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+
+axios.interceptors.request.use(request => {     
+    
+    // Edit request config
+    return request;
+}, error => {
+    return Promise.reject(error);
+});
+
+axios.interceptors.response.use(response => {
+    // Edit response config
+    return response;
+}, error => {
+    return Promise.reject(error);
+});
+    
+
+    
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
+
+  
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
