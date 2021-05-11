@@ -12,7 +12,7 @@ export class Tableview extends Component {
     }
 
     componentWillMount() {
-        fetch('http://localhost:3001/api/table').then((res) => {
+        fetch('https://afmsbackend.herokuapp.com/api/table').then((res) => {
             res.json().then((data) => {
                 this.setState({ data: data });
                 console.log(data)
