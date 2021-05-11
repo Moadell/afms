@@ -49,16 +49,7 @@ export class Auth extends Component {
                     }))
                     this.props.history.push('/')
                     auth.login(response.data.userId, response.data.token);
-                    return Axios.get('/profile/viewprofile')
-                }).then(data => {
-                    let profile = data.data.profile.username
-                    localStorage.setItem(
-                        'profileData',
-                        JSON.stringify({
-                            "username": profile
-                        }))
-
-
+                    return "success"
                 }).catch(e => {
 
                     this.setState({

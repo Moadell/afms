@@ -55,7 +55,6 @@ const App = (props) => {
     setTokenExpirationDate(null);
     setUserId(null);
     localStorage.removeItem('userData');
-    localStorage.removeItem('profileData');
     let token = null
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
