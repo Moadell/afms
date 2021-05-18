@@ -68,7 +68,8 @@ export class Auth extends Component {
             }))
             Axios.post('/user/signup', this.state.user).then(response => {
                 this.setState(pre => ({
-                    isloading: false
+                    isloading: false,
+                    isLoginMode: !pre.isLoginMode
                 }))
             })
                 .catch(e => {

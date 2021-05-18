@@ -16,6 +16,7 @@ import MainNavigation from './Containers/Menubar/MainNavigation/MainNavigation';
 import { AuthContext } from './context/auth-context'
 import { Dashboard } from "./screens/dashbord";
 import { Tableview } from "./screens/table";
+import { AddData } from "./Components/AddData/Adddata";
 
 
 import Spinner from './Containers/Spinner/Spinner';
@@ -96,6 +97,7 @@ const App = (props) => {
     route = (<>
       {token ? <Route path="/dashboard" exact component={Dashboard}></Route> : <Redirect to="/auth" />}
       {token ? <Route path="/table" exact component={Tableview} /> : <Redirect to="/auth" />}
+      {token ? <Route path="/add" exact component={AddData} /> : <Redirect to="/auth" />}
 
     </>
     )
