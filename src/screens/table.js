@@ -7,7 +7,6 @@ import Axios from 'axios';
 import './table.css'
 import validateForm from '../utils/validateform'
 import Spinner from '../Containers/Spinner/Spinner';
-import { data } from 'jquery';
 
 
 class Popup extends React.Component {
