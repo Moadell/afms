@@ -156,8 +156,9 @@ export class Auth extends Component {
                 <>
                     <div className="container error container-short">
                         <div className="mar-20">
-                            <h5>Error Code - {this.state.error.code}</h5>
-                            <h4>Error Message - {this.state.error.message}</h4>
+                            <h5>Error</h5>
+                            <h4>{this.state.error.message}</h4>
+                            <br></br>
                         </div>
                     </div>
                 </>
@@ -165,12 +166,20 @@ export class Auth extends Component {
         }
         return (<>
 
-            {isLoading}
-            {iserror}
+            
 
-            <div className="container container-short py-5">
+            <div className="container container-short py-5" >
+            <div className="split left">
+            <div className="centered img">
+            <img src="../logo.png" alt="AFMS Logo"></img>
+            </div>
+        </div>
+            <div className="split right">
+                <div className="centered">
+                {isLoading}
                 <h1 className="pt-2 py-2">{this.state.isLoginMode ? 'Login ' : 'Sign Up'}</h1>
                 <hr></hr>
+                
                 <form onSubmit={this.mySubmitHandler} className="pt-4">
                     <div className="form-group">
                         <label htmlFor="email">Email </label>
@@ -203,6 +212,7 @@ export class Auth extends Component {
                             <div className="mt-1"> <span className='error text-danger'>{this.state.errors.password}</span></div>}
 
                     </div>
+                    {iserror}
 
                     <div className="form-group">
                         <button style={{ marginRight: '15px' }}
@@ -221,7 +231,8 @@ export class Auth extends Component {
                         >Switch to {this.state.isLoginMode ? 'Sign Up' : 'Login'} </button>
                     </div>
                 </form>
-
+                </div>
+                </div>
             </div>
         </>
         )

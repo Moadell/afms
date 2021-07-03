@@ -12,9 +12,51 @@ label{
     margin-top:15%
 }
 .error h4{
-    color: red;
+    color: white;
 }
 
 .error h5{
     color:red;
 }
+body {
+    font-family: Arial;
+    color: white;
+    overflow: auto;
+  }
+  
+  
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .left {
+    left: 0;
+    background-color: white;
+  }
+  
+  .right {
+    right: 0;
+    background-color: green;
+    color: white;
+    
+  }
+ 
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .centered img {
+    width: 500px;
+    border-radius: 5%;
+  }

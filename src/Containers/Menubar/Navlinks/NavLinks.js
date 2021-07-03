@@ -17,6 +17,9 @@ const NavLinks = props => {
 {/*     <li>
       <NavLink to="/" exact>Home</NavLink>
     </li> */}
+    <li>
+    <a href="https://afmsagr.wordpress.com/" target="_blank" rel="noopener noreferrer">Blog</a>
+    </li>
     {auth.isLoggedIn && (<> 
     <li>
       <NavLink to="/dashboard">Dashboard</NavLink>
@@ -37,6 +40,7 @@ const NavLinks = props => {
     </li> */}
 
     {!auth.isLoggedIn && (
+      
       <li>
         <NavLink to="/auth">Login/Register</NavLink>
       </li>

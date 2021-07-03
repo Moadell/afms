@@ -11,7 +11,7 @@ function footer() {
 
                 <SocialMediaHorizontal />
             </footer>
-            <h5 className="text-center copyright"> © developed by Mohammed Gamal</h5>
+            <h5 className="text-center copyright"> © developed by AFMS</h5>
         </>
     )
 }

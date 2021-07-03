@@ -5,9 +5,9 @@ function SocialMedia() {
     return (<>
         <div className="footer-icon-sidebar">
             <ul className="navbar-nav">
-                <li className="nav-item inline-block">
+               {/*  <li className="nav-item inline-block">
                     <a href="https://github.com/mopolar" target="_blank" rel="noopener noreferrer" aria-label="Github" className="nav-link text-github"><i
-                        className="fa fa-github"></i></a></li>
+                        className="fa fa-github"></i></a></li> */}
                 <li className="nav-item inline-block">
                     <a href="https://www.facebook.com/profile.php?id=100006709388459" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="nav-link"><i
                         className="fa fa-facebook"></i></a>
