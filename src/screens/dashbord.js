@@ -7,7 +7,8 @@ export class Dashboard extends Component {
 	state = {
 
 	// Initially, no file is selected
-	selectedFile: null
+	selectedFile: null,
+	result: ""
 	};
 	
 	// On file select (from the pop up)
@@ -36,7 +37,11 @@ export class Dashboard extends Component {
 	
 	// Request made to the backend api
 	// Send formData object
-	axios.post("https://ml-plant.azurewebsites.net/predict", formData);
+	axios.post("https://ml-plant.azurewebsites.net/predict", formData).then(response=>{
+		this.setState({
+			result: response.data
+		});
+	});
 	};
 	
 	// File content to be displayed after
@@ -90,6 +95,9 @@ export class Dashboard extends Component {
 				</button>
 			</div>
 		{this.fileData()}
+		<br></br>
+		<h3>Result = {this.state.result}</h3>
+		
 		</div>
         </Container>
 	);

@@ -22,13 +22,13 @@ const NavLinks = props => {
     </li>
     {auth.isLoggedIn && (<> 
     <li>
-      <NavLink to="/dashboard">Dashboard</NavLink>
+      <NavLink to="/dashboard">Crop Diagnoses</NavLink>
     </li>
     <li>
-      <NavLink to="/table">Table</NavLink>
+      <NavLink to="/table">Sensors Data</NavLink>
     </li>
     <li>
-      <NavLink to="/add">Add Data</NavLink>
+      <NavLink to="/add">Add Data Record</NavLink>
     </li>
       </>
     )}

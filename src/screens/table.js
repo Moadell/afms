@@ -362,9 +362,7 @@ export class Tableview extends Component {
                                 <td>{value.ph}</td>
                                 <td>{value.temp}</td>
                                 <td>{value.device_number}</td>
-                                <td><button onClick={(event) => this.mySubmitHandler(event, value._id)}><i className="fa fa-trash"></i></button></td>
-                                <td><button onClick={(event) => this.togglePopup(event, value._id)}><i className="fa fa-pencil"></i></button></td>
-                            </tr>
+                               </tr>
 
                         )
                     })
