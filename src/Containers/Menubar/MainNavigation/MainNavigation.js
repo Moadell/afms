@@ -30,7 +30,7 @@ const MainNavigation = props => {
       <div className={attachedClasses.join(' ')}>
         {(
           <SideDrawer open={drawerIsOpen} closed={closeDrawer} >
-            <h3 className="text-left mt-2 pl-4">BlogBook</h3>
+            <h3 className="text-left mt-2 pl-4">AFMS</h3>
             <hr />
             <nav className="main-navigation__drawer-nav" >
               <img src={img} alt="logo" />
