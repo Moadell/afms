@@ -48,7 +48,7 @@ export class MainPage extends Component {
                         <Card border="success" style={{ width: '25rem', "align-items":"center" }}>
                             <Card.Img variant="top" src={cloud} style={{"width":"64px", "height":"64px", "marginTop":"5px" }} />
                             <Card.Body style={{"text-align":"center"}}>
-                                <Card.Title>YOUR PERSONAL FIELD ASSISSTANCE</Card.Title>
+                                <Card.Title style={{"color":"black"}}>YOUR PERSONAL FIELD ASSISSTANCE</Card.Title>
                                 <Card.Text >
                                     Between your hands.
                                 </Card.Text>
@@ -59,7 +59,7 @@ export class MainPage extends Component {
                         <Card border="success" style={{ width: '25rem' , "align-items":"center" }}>
                             <Card.Img variant="top" src={features} style={{"width":"64px", "height":"64px" , "marginTop":"5px" }} />
                             <Card.Body style={{"text-align":"center"}}>
-                                <Card.Title>USER FRIENDLY INTERFACE</Card.Title>
+                                <Card.Title style={{"color":"green"}}>USER FRIENDLY INTERFACE</Card.Title>
                                 <Card.Text>
                                     Four clicks away from your data.
                                 </Card.Text>
