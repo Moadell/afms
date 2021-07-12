@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import validateForm from '../../utils/validateform'
 import validEmailRegex from '../../utils/emailRegex'
+import img2 from '../../assets/logo.svg'
+
 import './Auth.css'
 import { AuthContext } from '../../context/auth-context'
 import Spinner from '../../Containers/Spinner/Spinner';
@@ -171,7 +173,7 @@ export class Auth extends Component {
             <div className="container container-short py-5" >
             <div className="split left">
             <div className="centered img">
-            <img src="../logo.png" alt="AFMS Logo"></img>
+            <img src={img2} alt="AFMS Logo" style={{"height":"80vh"}}></img>
             </div>
         </div>
             <div className="split right">
